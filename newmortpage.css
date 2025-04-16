@@ -18,13 +18,13 @@ body {
   z-index: 9999;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: space-between; /* מוודא שהלוגו בצד אחד והליסט בצד השני */
-  align-items: center; /* ממרכז את הלוגו והליסט אנכית */
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* עיצוב הלוגו */
 .logo {
-  height: 50px; /* גובה הלוגו */
+  height: 50px;
 }
 
 /* עיצוב רשימת הניווט */
@@ -39,13 +39,13 @@ body {
   flex-grow: 1; 
 }
 
-/* עיצוב כל פריט ברשימה */
+/* פריט ברשימה */
 .navbar-list li {
   position: relative;
   margin: 0 15px;
 }
 
-/* עיצוב הקישורים */
+/* קישורים */
 .navbar-list a {
   text-decoration: none;
   color: #fff;
@@ -55,10 +55,11 @@ body {
   display: block;
 }
 
-/* עיצוב הקישורים בעת ריחוף */
+/* ריחוף */
 .navbar-list a:hover {
   color: #ffbf00;
 }
+
 /* תפריט נפתח */
 .dropdown-content {
   display: none;
@@ -69,7 +70,7 @@ body {
   min-width: 220px;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10001; /* מוודא שהתפריט יישאר מעל ה־navbar */
+  z-index: 10001;
   padding: 10px 0;
 }
 
@@ -96,7 +97,7 @@ body {
   width: 100%;
   height: 350px;
   overflow: hidden;
-  z-index: 1; /* מוודא שהתמונה לא מכסה את ה־navbar */
+  z-index: 1;
 }
 
 .hero-image img {
@@ -169,10 +170,11 @@ ul li {
   padding: 30px;
   border-radius: 10px;
 }
+
 .cta form {
   display: flex;
-  flex-direction: column; /* שדה אחר שדה בעמודה */
-  gap: 10px; /* הוסף רווח בין השדות */
+  flex-direction: column;
+  gap: 10px;
   max-width: 400px;
   margin-top: 20px;
 }
@@ -180,11 +182,10 @@ ul li {
 .cta input,
 .cta button {
   padding: 12px;
-  margin: 0; /* הסר את margin הנוסף */
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
-  width: 100%; /* וודא שהשדות תופסים את כל רוחב הטופס */
+  width: 100%;
 }
 
 .cta input {
@@ -195,7 +196,6 @@ ul li {
 .cta input::placeholder {
   text-align: right;
 }
-
 
 .cta button {
   background-color: #2a4971;
@@ -209,14 +209,15 @@ ul li {
   background-color: #1e3552;
 }
 
-  /* עיצוב אייקונים */
-  .icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-left: 8px;
-  }
+/* אייקונים */
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
 
+/* פוטר */
 footer {
   background-color: #2a4971;
   color: #fff;
@@ -224,72 +225,58 @@ footer {
   text-align: center;
 }
 
-/* זה יבטיח שכל הטקסטים בפוטר יהיו לבנים */
-footer p, footer h3, footer h4, footer span, footer li, footer a:not(.social-icons a) {
+footer p,
+footer h3,
+footer h4,
+footer span,
+footer li,
+footer a:not(.social-icons a) {
   color: #fff;
 }
 
 .footer-content .social-icons a {
-color: #ffffff;
-font-size: 24px;
-margin: 0 10px;
-transition: color 0.3s;
-text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+  text-decoration: none;
 }
 
 .footer-content .social-icons a:hover {
-color: #ffbf00;
+  color: #ffbf00;
 }
 
-/* בר ניווט (hamburger menu למובייל) */
+/* התאמה למובייל – שומר על עיצוב דסקטופ */
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .navbar-list {
-    display: none; /* מסתיר את הרשימה במובייל */
-    width: 100%; /* התפרשות של התפריט על כל הרוחב */
-    flex-direction: column; /* פריטים בערימה */
-    gap: 10px; /* רווח בין פריטים */
-    text-align: right;
-  }
-
-  .navbar-list li {
-    width: 100%;
-    text-align: right;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
 
   .navbar-list a {
-    padding: 12px 20px;
     font-size: 16px;
+    padding: 8px;
   }
 
-  .navbar-list.show {
-    display: block; /* מציג את רשימת הניווט בעת לחיצה */
+  .logo {
+    height: 40px;
   }
 
-  /* סגנון ל-image hero */
   .hero-image {
-    height: 250px; /* גובה התמונה מתואם למובייל */
+    height: 250px;
   }
 
   .hero-text h1 {
-    font-size: 28px; /* הפחתת גודל כותרת */
+    font-size: 28px;
   }
 
   .hero-text p {
-    font-size: 16px; /* הפחתת גודל טקסט */
+    font-size: 16px;
   }
 
-  /* קריאה לפעולה (CTA) */
   .cta {
     padding: 20px;
-  }
-
-  .cta form {
-    gap: 15px;
   }
 
   .cta input,
@@ -297,13 +284,12 @@ color: #ffbf00;
     font-size: 14px;
     padding: 10px;
   }
-}
 
-/* עיצוב סוציאלי פוטר */
-.footer-content .social-icons a {
-  font-size: 20px; /* התאמת גודל האייקונים */
-}
+  .footer-content .social-icons a {
+    font-size: 20px;
+  }
 
-footer {
-  padding: 30px 10px;
+  footer {
+    padding: 30px 10px;
+  }
 }
