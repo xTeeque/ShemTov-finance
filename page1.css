@@ -304,24 +304,28 @@ footer {
     }
 }
 
-/* תגובה רספונסיבית למובייל (עד 768px) */
-@media screen and (max-width: 768px) {
+/* תגובה רספונסיבית למובייל (עד 768px) */@media screen and (max-width: 768px) {
+  /* ניווט */
   .navbar {
     padding: 10px 15px;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: auto;
   }
 
+  .logo {
+    height: 40px;
+  }
+
   .navbar-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    gap: 15px;
-    width: 100%;
-    padding: 10px 0;
+    align-items: center;
+    gap: 30px;
+    width: auto;
+    padding: 0;
   }
 
   .navbar-list li {
@@ -335,8 +339,11 @@ footer {
 
   .dropdown-content {
     min-width: 200px;
+    right: 0;
+    left: auto;
   }
 
+  /* כל השאר (תמונות, טקסט, כותרות וכו') */
   img {
     width: 100%;
     height: auto;
