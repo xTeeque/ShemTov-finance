@@ -394,163 +394,61 @@ footer p a:hover {
   /* ניווט */
   .navbar {
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
   }
 
   .logo {
     height: 40px;
-    margin-bottom: 10px;
   }
 
   .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    margin-right: auto;
-  }
-
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
+    display: none !important; /* אין צורך בתפריט המבורגר */
   }
 
   .navbar-list {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    background-color: #2a4971;
+    display: flex;
+    flex-direction: row; /* נשאר שורה */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: transparent;
+    width: auto;
     padding: 0;
-    gap: 0;
   }
 
   .navbar-list li {
-    width: 100%;
-    text-align: right;
+    width: auto;
+    text-align: center;
   }
 
   .navbar-list a {
-    padding: 12px 20px;
+    padding: 10px;
     font-size: 16px;
-    width: 100%;
+    width: auto;
   }
 
-  /* תפריט נפתח */
+  /* dropdown */
   .dropdown-content {
-    position: static;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* שינוי לכיוון עמודה */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2a4971;
+    min-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
   }
 
   .dropdown-content li a {
-    padding: 12px 20px;
+    padding: 10px 20px;
     font-size: 15px;
   }
 
-  /* סליידר */
-  .hero {
-    height: 200px;
-  }
-
-  .slider-text {
-    padding: 15px 20px;
-  }
-
-  .slider-text h1 {
-    font-size: 20px;
-  }
-
-  /* מבוא */
-  .intro {
-    padding: 30px 15px;
-  }
-
-  .intro h2 {
-    font-size: 24px;
-  }
-
-  /* כרטיסים */
-  .cards-wrapper {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 20px 10px;
-    gap: 15px;
-  }
-
-  .card-container {
-    flex: 0 0 auto;
-    width: 250px;
-    height: 180px;
-  }
-
-  .card-side {
-    padding: 15px;
-  }
-
-  /* המלצות */
-  .testimonials-section {
-    padding: 30px 15px;
-  }
-
-  .testimonials-section h2 {
-    font-size: 22px;
-  }
-
-  .testimonials-slider {
-    gap: 10px;
-    padding: 0 10px 10px;
-  }
-
-  .testimonial {
-    flex: 0 0 85%;
-  }
-
-  .testimonial p {
-    font-size: 15px;
-  }
-
-  /* טופס יצירת קשר */
-  .contact-section {
-    padding: 30px 15px;
-  }
-
-  .contact-section h2 {
-    font-size: 24px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 90%;
-  }
-
-  .submit-button {
-    width: 90%;
-  }
-
-  /* פוטר */
-  footer {
-    padding: 20px 10px;
-  }
-
-  .footer-content .social-icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .footer-content .social-icons a {
-    font-size: 16px;
-  }
-
-  .footer-content .icon {
-    width: 18px;
-    height: 18px;
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
