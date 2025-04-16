@@ -452,3 +452,42 @@ footer p a:hover {
     display: block;
   }
 }
+
+@media (max-width: 600px) {
+  .navbar-list {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .navbar-list li {
+    margin: 5px 10px;
+  }
+
+  .navbar-list a {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-wrapper {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .card-container {
+    width: 250px;
+    flex: 0 0 auto;
+  }
+
+  .card-side {
+    padding: 15px;
+  }
+
+  .slider-text h1 {
+    font-size: 20px;
+  }
+}
