@@ -240,7 +240,6 @@ body {
 .footer-content .social-icons a:hover {
   color: #ffbf00;
 }
-
 @media (max-width: 768px) {
   /* התאמה בר ניווט */
   .navbar {
