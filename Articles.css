@@ -223,3 +223,98 @@ text-decoration: none;
 color: #ffbf00;
 }
 
+@media (max-width: 768px) {
+  /* התאמה בר ניווט */
+  .navbar {
+    flex-direction: column; /* שינוי לכיוון אנכי */
+    padding: 15px;
+    justify-content: center;
+    text-align: center; /* ממרכז את הפריטים */
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-list a {
+    font-size: 16px;
+    padding: 12px;
+    display: block;
+    width: 100%;
+  }
+
+  /* התאמת תפריט נפתח במובייל */
+  .dropdown-content {
+    display: block; /* מוודא שהתפריט יישאר פתוח במובייל */
+    position: relative;
+    width: 100%;
+  }
+
+  /* תמונת גיבור */
+  .hero-image {
+    height: 250px; /* גובה התמונות במובייל */
+  }
+
+  .hero-text {
+    top: 40%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 10px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  /* רשת מאמרים */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+
+  .article-card img {
+    height: 180px; /* גובה התמונה במובייל */
+  }
+
+  .article-card h2 {
+    font-size: 1.2rem;
+    margin: 12px;
+  }
+
+  .article-card p {
+    font-size: 0.9rem;
+  }
+
+  /* התאמת אייקונים */
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* פוטר */
+  footer {
+    padding: 30px 15px;
+  }
+
+  .footer-content .social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
