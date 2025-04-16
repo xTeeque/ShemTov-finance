@@ -1,0 +1,432 @@
+/* כללי */
+body {
+    margin: 0;
+    font-family: 'Alef', sans-serif;
+    direction: rtl;
+    background-color: #f4f4f4;
+    padding-top: 120px; /* הגדלת המרווח כדי למנוע חפיפות עם הבר ניווט */
+  }
+
+/* עיצוב בר ניווט */
+.navbar {
+  background-color: #2a4971;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between; /* מוודא שהלוגו בצד אחד והליסט בצד השני */
+  align-items: center; /* ממרכז את הלוגו והליסט אנכית */
+}
+
+/* עיצוב הלוגו */
+.logo {
+  height: 50px; /* גובה הלוגו */
+}
+
+/* עיצוב רשימת הניווט */
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; 
+  gap: 60px;
+  position: relative;
+  flex-grow: 1; 
+}
+
+/* עיצוב כל פריט ברשימה */
+.navbar-list li {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* עיצוב הקישורים */
+.navbar-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+/* עיצוב הקישורים בעת ריחוף */
+.navbar-list a:hover {
+  color: #ffbf00;
+}
+
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #2a4971;
+  min-width: 220px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  padding: 10px 0;
+}
+
+.dropdown-content li {
+  padding: 0;
+}
+
+.dropdown-content li a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.dropdown-content li a:hover {
+  background-color: #1e3552;
+}
+
+/* הצגת תפריט dropdown בעת ריחוף */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  /* סליידר עם טקסט על גבי התמונות */
+  .hero {
+    position: relative;
+    height: 300px; /* גובה התמונות */
+    overflow: hidden;
+  }
+  
+  .slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slider-img.active {
+    opacity: 1;
+  }
+  
+  .slider-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .slider-text h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  /* תוכן */
+  .intro {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+  }
+  
+  .intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* חשוב */
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto; /* מאפשר גלילה אופקית במסכים קטנים */
+    padding: 30px;
+  }
+  
+  
+  .card-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .card-front {
+    background-color: #ffffff;
+  }
+  
+  .card-back {
+    background-color: #2a4971;
+    color: #fff;
+    transform: rotateY(180deg);
+  }
+  
+  /* המלצות */
+  .testimonials-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #2a4971;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden; /* מבטיח שההמלצות לא יגלשו מעבר */
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .testimonial {
+    flex: 0 0 300px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .testimonial.active {
+    opacity: 1;
+  }
+  
+  .testimonial p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .testimonial span {
+    font-weight: bold;
+    color: #2a4971;
+  }
+  .contact-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form label {
+    display: none; /* הסתרת התוויות */
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    transition: border 0.3s ease;
+  }
+  
+  .contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    border-color: #4CAF50;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+
+  footer {
+  background-color: #2a4971;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p,
+footer h3,
+footer h4,
+footer span,
+footer li {
+  color: #fff;
+}
+
+/* תיקון ספציפיות לקישורים בתוך הפוטר */
+footer p a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: #ffbf00;
+}
+
+/* אייקוני רשתות חברתיות */
+.footer-content .social-icons a {
+  color: #ffffff !important;
+  font-size: 18px;
+  margin: 0 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-content .social-icons a:hover {
+  color: #ffbf00;
+}
+
+/* עיצוב לתמונות של האייקונים */
+.footer-content .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* סטייל עבור כפתור המבורגר */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    background-color: #2a4971;
+    padding: 15px 0;
+    position: relative;
+  }
+
+  .navbar-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-list a {
+    font-size: 16px;
+    padding: 12px;
+    display: block;
+    width: 100%;
+  }
+
+  /* כשמתקרבים לגבול (למשל 768px), יש להסתיר את הניווט העליון */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+}
+
+
+
+

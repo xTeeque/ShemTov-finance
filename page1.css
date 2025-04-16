@@ -1,0 +1,393 @@
+/* הגדרת עיצוב בסיסי */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* עיצוב בר ניווט */
+.navbar {
+  background-color: #2a4971;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; 
+  direction: rtl;
+  height: 70px; /* גובה קבוע לבר */
+  justify-content: space-between; /* מוודא שהלוגו בצד אחד והניווט בצד השני */
+}
+
+/* עיצוב הלוגו */
+.logo {
+  height: 50px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  height: 100%; 
+}
+
+/* עיצוב רשימת הניווט */
+.navbar-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  gap: 100px;
+  height: 100%; /* תוודא שלרשימת הניווט יהיה גובה של 100% */
+}
+
+/* עיצוב כל פריט */
+.navbar-list li {
+  display: flex;
+  align-items: center;
+  height: 100%; /* גם על הפריטים בתפריט */
+}
+
+/* עיצוב הקישורים */
+.navbar-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  height: 100%; /* על הקישורים גם */
+}
+
+/* אפקט ריחוף */
+.navbar-list a:hover {
+  color: #ffbf00;
+}
+
+ 
+  /* dropdown */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2a4971;
+    min-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    padding: 10px 0;
+  }
+  
+  .dropdown-content li {
+    padding: 0;
+  }
+  
+  .dropdown-content li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #1e3552;
+  }
+  
+  /* הצגת תפריט dropdown בעת ריחוף */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+    
+
+/* הגדרת עיצוב עבור התמונות */
+img {
+    width: 100%; /* תמונה מתפשטת לרוחב הדף */
+    height: auto; /* שימור על פרופורציות התמונה */
+    max-height: 620px; /* מגביל את הגובה של התמונה */
+    object-fit: cover; /* שומר על פרופורציות התמונה מבלי לעוות אותה */
+    margin-top: 20px;
+}
+
+
+/* עיצוב החלקים שמסבירים את המידע */
+.explanation1, .explanation2, .explanation3, .explanation4, .explanation5, .explanation6 {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: right;
+}
+
+/* CSS להסתרת התוכן בהתחלה */
+.explanation3 {
+    visibility: hidden;  /* התוכן מוסתר */
+    opacity: 0;  /* התוכן לא נראה */
+    transition: opacity 1s ease-in-out, visibility 0s 1s;  /* אנימציה של חשיפת התוכן */
+}
+
+/* חשיפת התוכן */
+.explanation3.show {
+    visibility: visible;  /* התוכן יהיה גלוי */
+    opacity: 1;  /* התוכן יהיה נראה */
+    transition: opacity 1s ease-in-out; /* רק ה-opacity משתנה */
+}
+
+/* כל סוג משכנתא יקבל עיכוב בהתאמה */
+.types1, .types2, .types3, .types4, .types5 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+.types1.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;  /* אין עיכוב */
+}
+
+.types2.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;  /* עיכוב של חצי שנייה */
+}
+
+.types3.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 1s;  /* עיכוב של שנייה */
+}
+
+.types4.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 1.5s;  /* עיכוב של 1.5 שניות */
+}
+
+.types5.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 2s;  /* עיכוב של 2 שניות */
+}
+
+
+
+/* עיצוב כותרות */
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.4em;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* עיצוב טקסט */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* עיצוב הרשימות */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* עיצוב עבור סוגי המשכנתאות */
+.types1, .types2, .types3, .types4, .types5 {
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.types1 h4, .types2 h4, .types3 h4, .types4 h4, .types5 h4 {
+    margin-top: 0;
+}
+
+  /* עיצוב אייקונים */
+  .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+footer {
+    background-color: #2a4971;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* זה יבטיח שכל הטקסטים בפוטר יהיו לבנים */
+  footer p, footer h3, footer h4, footer span, footer li, footer a:not(.social-icons a) {
+    color: #fff;
+  }
+  
+.footer-content .social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-content .social-icons a:hover {
+  color: #ffbf00;
+}
+
+
+
+/* תגובה רספונסיבית */
+@media screen and (max-width: 768px) {
+    .navbar-list {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-list li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .explanation1, .explanation2, .explanation3, .explanation4, .explanation5, .explanation6 {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p, ul li {
+        font-size: 1.1em;
+    }
+}
+
+/* תגובה רספונסיבית למובייל (עד 768px) */
+@media screen and (max-width: 768px) {
+  /* בר ניווט */
+  .navbar {
+      padding: 10px;
+      height: auto; /* מתאם את הגובה של הבר ניווט */
+  }
+
+  .navbar-list {
+      display: block;
+      text-align: center;
+      gap: 20px; /* מבדל בין הקישורים */
+  }
+
+  .navbar-list li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 15px; /* מרווח נוסף בין פריטים */
+  }
+
+  .navbar-list a {
+      font-size: 16px; /* הפחתת גודל הפונט */
+      padding: 12px 0; /* הפחתת הרוחב */
+  }
+
+  /* תפריט Dropdown */
+  .dropdown-content {
+      min-width: 200px; /* צמצום רוחב התפריט */
+  }
+
+  /* תמונות */
+  img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* הסברים */
+  .explanation1, .explanation2, .explanation3, .explanation4, .explanation5, .explanation6 {
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 95%;
+  }
+
+  /* כותרות */
+  h2 {
+      font-size: 1.6em; /* הפחתת גודל הכותרת */
+  }
+
+  h4 {
+      font-size: 1.2em;
+  }
+
+  /* טקסט */
+  p, ul li {
+      font-size: 1em; /* הפחתת גודל הטקסט */
+  }
+
+  /* סוגי משכנתאות */
+  .types1, .types2, .types3, .types4, .types5 {
+      padding: 15px;
+      margin: 12px 0;
+  }
+
+  /* אייקונים */
+  .icon {
+      width: 18px;
+      height: 18px;
+  }
+
+  /* פוטר */
+  footer {
+      padding: 20px;
+  }
+
+  .footer-content .social-icons a {
+      font-size: 20px; /* הפחתת גודל האייקונים */
+      margin: 0 8px;
+  }
+
+  /* התאמת כפתור שליחה */
+  .submit-button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      margin-top: 10px;
+  }
+}

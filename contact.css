@@ -1,0 +1,352 @@
+/* הגדרות בסיס */
+body {
+    margin: 0;
+    font-family: 'Alef', sans-serif;
+    direction: rtl; /* כיוון לימין */
+    background-color: #f4f4f4;
+    padding-top: 80px; /* מקום לבר ניווט קבוע */
+}
+  
+/* עיצוב בר ניווט */
+.navbar {
+    background-color: #2a4971;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between; /* מוודא שהלוגו בצד אחד והליסט בצד השני */
+    align-items: center; /* ממרכז את הלוגו והליסט אנכית */
+  }
+  
+  /* עיצוב הלוגו */
+  .logo {
+    height: 50px; /* גובה הלוגו */
+  }
+  
+  /* עיצוב רשימת הניווט */
+  .navbar-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; 
+    gap: 60px;
+    position: relative;
+    flex-grow: 1; 
+  }
+  
+  /* עיצוב כל פריט ברשימה */
+  .navbar-list li {
+    position: relative;
+    margin: 0 15px;
+  }
+  
+  /* עיצוב הקישורים */
+  .navbar-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+  }
+  
+  /* עיצוב הקישורים בעת ריחוף */
+  .navbar-list a:hover {
+    color: #ffbf00;
+  }
+  
+/* תפריט נפתח */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1e3552;
+    min-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10001; /* מוודא שהתפריט יישאר מעל ה־navbar */
+    padding: 10px 0;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown-content li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+  
+.dropdown-content li a:hover {
+    background-color: #ffbf00;
+}
+  
+/* תמונת גיבור */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    z-index: 1; /* מוודא שהתמונה לא מכסה את ה־navbar */
+}
+  
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.hero-text {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+  
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+  
+.hero-text p {
+    font-size: 20px;
+    margin: 0;
+}
+  
+/* תוכן כללי */
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+h2 {
+    font-size: 24px;
+    color: #1e3552; /* כחול כהה */
+    margin-bottom: 15px;
+}
+  
+h3 {
+    font-size: 20px;
+    color: #1e3552; /* כחול כהה */
+    margin-bottom: 10px;
+}
+  
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+  
+/* טופס יצירת קשר */
+.contact-form {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.contact-form .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+    direction: rtl;
+    text-align: right;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #1e3552; /* כחול כהה */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffbf00;
+}
+
+  /* עיצוב אייקונים */
+  .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+footer {
+    background-color: #2a4971;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* זה יבטיח שכל הטקסטים בפוטר יהיו לבנים */
+  footer p, footer h3, footer h4, footer span, footer li, footer a:not(.social-icons a) {
+    color: #fff;
+  }
+  
+.footer-content .social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-content .social-icons a:hover {
+  color: #ffbf00;
+}
+
+@media (max-width: 768px) {
+    /* התאמה בר ניווט */
+    .navbar {
+      flex-direction: column; /* שינוי לכיוון אנכי */
+      padding: 15px;
+      justify-content: center;
+    }
+  
+    .navbar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .navbar-list li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-list a {
+      font-size: 16px;
+      padding: 12px;
+      display: block;
+      width: 100%;
+    }
+  
+    /* התאמת תפריט נפתח במובייל */
+    .dropdown-content {
+      display: block; /* מוודא שהתפריט יישאר פתוח במובייל */
+      position: relative;
+      width: 100%;
+    }
+  
+    .hero-image {
+      height: 250px; /* גובה התמונות במובייל */
+    }
+  
+    .hero-text {
+      top: 40%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      padding: 10px 20px;
+    }
+  
+    .hero-text h1 {
+      font-size: 26px;
+    }
+  
+    .hero-text p {
+      font-size: 16px;
+    }
+  
+    /* התאמת טופס יצירת קשר */
+    .contact-form .container {
+      width: 90%;
+    }
+  
+    .contact-form h2 {
+      font-size: 24px;
+    }
+  
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 100%;
+    }
+  
+    .contact-form label {
+      font-size: 16px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 14px;
+    }
+  
+    .contact-form button {
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    /* התאמת הפוטר במובייל */
+    footer {
+      padding: 30px 15px;
+    }
+  
+    .footer-content .social-icons a {
+      font-size: 20px;
+      margin: 0 8px;
+    }
+  }
+  

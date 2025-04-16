@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שם טוב פיננסים</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+ <!-- בר ניווט -->
+<nav class="navbar">
+  <img src="logoo1.jpg" alt="Logo" class="logo">
+  <ul class="navbar-list">
+    <li><a href="index.html">בית</a></li>
+    <li class="dropdown">
+      <a href="page1.html" class="dropbtn">משכנתאות ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="newmortpage.html">משכנתא חדשה</a></li>
+        <li><a href="newmortpage2.html">מחזור משכנתא</a></li>
+        <li><a href="newmortpage3.html">משכנתא לכל מטרה</a></li>
+        <li><a href="newmortpage4.html">גיוס אשראי כנגד נכס קיים</a></li>
+        <li><a href="newmortpage5.html">גיוס אשראי לנכס להשקעה</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="page2.html" class="dropbtn">איחוד הלוואות ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="Loanconsolidation.html">איחוד הלוואות חכם ואחראי</a></li>
+        <li><a href="loanplain.html">תוכנית הליווי</a></li>
+        <li><a href="check.html">בדיקת זכאות</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">מסורבי בנקים ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="Mortgageforpumpers.html">משכנתא למסורבי בנקים</a></li>
+        <li><a href="loanconsolpumpers.html">איחוד הלוואות למסורבים</a></li>
+        <li><a href="loanconsolpumpers2.html">משכנתא לפושטי רגל</a></li>
+        <li><a href="loanpumpers3.html">משכנתא לבעלי דירוג נמוך</a></li>
+      </ul>
+    </li>
+    <li><a href="Articles.html">מאמרים</a></li>
+    <li><a href="ContactUs.html">צור קשר</a></li>
+  </ul>
+</nav>
+
+
+  <!-- סליידר עם טקסט על גבי התמונות -->
+  <div class="hero" id="home">
+    <div class="slider">
+      <img src="pic1.jpg" class="slider-img active">
+      <img src="pic2.jpg" class="slider-img">
+      <img src="pic3.jpg" class="slider-img">
+      <div class="slider-text">
+        <h1>ההון שלך צריך לעבוד חכם – לא קשה</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- תוכן מרכזי -->
+  <div class="intro">
+    <h2>שם טוב פיננסים</h2>
+    <p>שם טוב פיננסים היא חברה מתקדמת ומובילה בתחום הפיננסים, המתמחה במתן פתרונות פיננסיים מותאמים אישית המאפשרים ללקוחותיה להתמודד עם אתגרים פיננסיים בצורה היעילה ביותר. אנחנו מבינים כי כל אדם או משפחה יש להם צרכים פיננסיים שונים, ולכן כל פתרון שאנחנו מציעים מותאם אישית כדי לסייע לכל לקוח לממש את מטרותיו הפיננסיות בצורה המיטבית.</p>
+  </div>
+
+  <!-- כרטיסיות שירותים -->
+  <div class="cards-wrapper">
+    <div class="card-container" onclick="flipCard(this)">
+      <div class="card">
+        <div class="card-side card-front">
+          <h3>משכנתאות</h3>
+        </div>
+        <div class="card-side card-back">
+          <p>משכנתא היא הלוואה גדולה שנותן הבנק (או גוף מימון אחר) למטרת קניית דירה או נכס. הנכס משמש כערבון – כלומר, אם לא תחזיר את ההלוואה, הבנק יכול לקחת את הנכס</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container" onclick="flipCard(this)">
+      <div class="card">
+        <div class="card-side card-front">
+          <h3>איחוד הלוואות</h3>
+        </div>
+        <div class="card-side card-back">
+          <p>איחוד הלוואות הוא תהליך שבו לוקחים את כל ההלוואות הקיימות ומאחדים אותן להלוואה אחת.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container" onclick="flipCard(this)">
+      <div class="card">
+        <div class="card-side card-front">
+          <h3>הלוואה לכל מטרה</h3>
+        </div>
+        <div class="card-side card-back">
+          <p>פתרון מימון גמיש לכל צורך – שיפוץ, חופשה, עזרה לילדים, סגירת חובות, הקמת עסק ועוד.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container" onclick="flipCard(this)">
+      <div class="card">
+        <div class="card-side card-front">
+          <h3>מסורבי בנקים</h3>
+        </div>
+        <div class="card-side card-back">
+          <p>אלה אנשים שהבנקים סירבו לתת להם הלוואה – לרוב בגלל דירוג אשראי נמוך, חובות קיימים או בעיות פיננסיות בעבר.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- המלצות לקוחות -->
+  <div class="testimonials-section">
+    <h2>מה הלקוחות שלנו אומרים</h2>
+    <div class="testimonials-slider">
+      <div class="testimonial active">
+        <p>"צוות מקצועי, שירות אישי והשקעות מדויקות. ממליץ בחום!"</p>
+        <span>- מיכל לוי</span>
+      </div>
+      <div class="testimonial">
+        <p>"שם טוב פיננסים ליוו אותי משלב ההתחלה ועד לתשואות מרשימות."</p>
+        <span>- דוד כהן</span>
+      </div>
+      <div class="testimonial">
+        <p>"מרגיש שיש על מי לסמוך – שקיפות מלאה ויחס אישי."</p>
+        <span>- ענת פישר</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- צור קשר -->
+  <!-- צור קשר -->
+<div id="contact" class="contact-section">
+  <h2>צרו קשר</h2>
+  <form id="contactForm" class="contact-form" onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" name="name" required placeholder="הכנס את שמך המלא">
+    <input type="email" id="email" name="email" required placeholder="הכנס את כתובת האימייל שלך">
+    <input type="tel" id="phone" name="phone" required placeholder="הכנס את מספר הטלפון שלך">
+    <textarea id="message" name="message" required placeholder="הכנס את ההודעה שלך"></textarea>
+    <button type="submit" class="submit-button">שלח</button>
+  </form>
+</div>
+
+
+ <!-- פוטר -->
+ <footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 שם טוב פיננסים</p>
+    <p>📍 כתובת: רחוב הדוגמה 10, תל אביב</p>
+    <p>📞 <a href="tel:0539327773">התקשר: 053-9327773</a></p>
+    <p>📧 <a href="mailto:Shem@tovcom.org"> שלח מייל</a></p>
+    <p>📱 עקבו אחרינו:</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/12GV1v4F7uL/?mibextid=wwXIfr" target="_blank">
+        <img src="facebook.png" alt="פייסבוק" class="icon"> פייסבוק
+      </a>
+      |
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="instagram.png" alt="אינסטגרם" class="icon"> אינסטגרם
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function sendWhatsApp(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const nameRegex = /^[\u0590-\u05FFa-zA-Z\s'-]{2,}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^05\d{8}$/; // תואם לפורמט ישראלי תקני
+
+    if (!nameRegex.test(name)) {
+      alert("אנא הזן שם תקני (לפחות 2 תווים, בעברית או באנגלית).");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      alert("אנא הזן כתובת אימייל תקינה.");
+      return;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      alert("אנא הזן מספר טלפון ישראלי תקני (למשל 0531234567).");
+      return;
+    }
+
+    if (message.length < 5) {
+      alert("אנא הזן הודעה של לפחות 5 תווים.");
+      return;
+    }
+
+    const text = `שם: ${name}\nאימייל: ${email}\nטלפון: ${phone}\nהודעה: ${message}`;
+    const whatsappNumber = "0539327773";
+    const whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+    window.open(whatsappUrl, "_blank");
+  }
+</script>
+
+
+
+  <script src="in.js"></script>
+</body>
+</html>

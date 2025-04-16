@@ -1,0 +1,225 @@
+/* כללי */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Alef', sans-serif;
+  direction: rtl;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+}
+
+a {
+  color: #0b3d91;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* עיצוב בר ניווט */
+.navbar {
+  background-color: #2a4971;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between; /* מוודא שהלוגו בצד אחד והליסט בצד השני */
+  align-items: center; /* ממרכז את הלוגו והליסט אנכית */
+}
+
+/* עיצוב הלוגו */
+.logo {
+  height: 50px; /* גובה הלוגו */
+}
+
+/* עיצוב רשימת הניווט */
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; 
+  gap: 60px;
+  position: relative;
+  flex-grow: 1; 
+}
+
+/* עיצוב כל פריט ברשימה */
+.navbar-list li {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* עיצוב הקישורים */
+.navbar-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+/* עיצוב הקישורים בעת ריחוף */
+.navbar-list a:hover {
+  color: #ffbf00;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  right: 0;
+  top: 100%;
+  text-align: right;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  color: #0b3d91;
+  padding: 10px 16px;
+  display: block;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* הצגת הדרופדאון בריחוף */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* תמונת גיבור */
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  max-width: 90%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* רשת מאמרים */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 35px;
+  padding: 60px 6%;
+  box-sizing: border-box;
+}
+
+.article-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-card h2 {
+  font-size: 1.3rem;
+  color: #0b3d91;
+  margin: 16px;
+}
+
+.article-card h2 a {
+  color: #0b3d91;
+  transition: color 0.3s ease;
+}
+
+.article-card h2 a:hover {
+  color: #d4af37;
+}
+
+.article-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 16px 20px;
+}
+
+  /* עיצוב אייקונים */
+  .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+  
+footer {
+  background-color: #2a4971;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* זה יבטיח שכל הטקסטים בפוטר יהיו לבנים */
+footer p, footer h3, footer h4, footer span, footer li, footer a:not(.social-icons a) {
+  color: #fff;
+}
+
+.footer-content .social-icons a {
+color: #ffffff;
+font-size: 24px;
+margin: 0 10px;
+transition: color 0.3s;
+text-decoration: none;
+}
+
+.footer-content .social-icons a:hover {
+color: #ffbf00;
+}
+

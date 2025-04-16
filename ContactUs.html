@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>צור קשר | שום טוב פיננסים</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- בר ניווט -->
+  <nav class="navbar">
+    <img src="logoo1.jpg" alt="Logo" class="logo">
+    <ul class="navbar-list">
+        <li><a href="index.html">בית</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">משכנתאות ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="newmortpage.html">משכנתא חדשה</a></li>
+                <li><a href="newmortpage2.html">מחזור משכנתא</a></li>
+                <li><a href="newmortpage3.html">משכנתא לכל מטרה</a></li>
+                <li><a href="newmortpage4.html">גיוס אשראי כנגד נכס קיים</a></li>
+                <li><a href="newmortpage5.html">גיוס אשראי לנכס להשקעה</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">איחוד הלוואות ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="Loanconsolidation.html">איחוד הלוואות חכם ואחראי</a></li>
+                <li><a href="loanplain.html">תוכנית הליווי</a></li>
+                <li><a href="check.html">בדיקת זכאות</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">מסורבי בנקים ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="Mortgageforpumpers.html">משכנתא למסורבי בנקים</a></li>
+                <li><a href="loanconsolpumpers.html">איחוד הלוואות למסורבים</a></li>
+                <li><a href="loanconsolpumpers2.html">משכנתא לפושטי רגל</a></li>
+                <li><a href="loanpumpers3.html">משכנתא לבעלי דירוג נמוך</a></li>
+            </ul>
+        </li>
+        <li><a href="Articles.html">מאמרים</a></li>
+        <li><a href="ContactUs.html">צור קשר</a></li>
+    </ul>
+  </nav>
+
+  <!-- תמונת רקע וקטע של טקסט -->
+  <div class="hero-image">
+    <img src="Contact.jpg" alt="צור קשר - תמונת רקע">
+    <div class="hero-text">
+      <h1>צור קשר עם שום טוב פיננסים</h1>
+      <p>צרו קשר לקבלת ייעוץ פיננסי מותאם אישית והתחילו את הדרך להצלחה כלכלית</p>
+    </div>
+  </div>
+
+  <!-- טופס יצירת קשר -->
+  <section class="contact-form">
+    <div class="container">
+      <h2>נשמח לשמוע ממך!</h2>
+      <form action="https://api.whatsapp.com/send" method="GET" id="contactForm" onsubmit="sendMessage(event)">
+        <label for="name">שם מלא:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">אימייל:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">טלפון:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">הודעה:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="submit-btn">שלח</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- פרטי יצירת קשר -->
+  <section class="contact-info">
+    <div class="container">
+      <h2>פרטי יצירת קשר</h2>
+      <ul>
+        <li><strong>טלפון:</strong> 03-1234567</li>
+        <li><strong>אימייל:</strong> info@stfnc.co.il</li>
+        <li><strong>כתובת:</strong> רחוב פיננסי 5, תל אביב</li>
+      </ul>
+    </div>
+  </section>
+ <!-- פוטר -->
+ <footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 שם טוב פיננסים</p>
+    <p>📍 כתובת: רחוב הדוגמה 10, תל אביב</p>
+    <p>📞 <a href="tel:0539327773">התקשר: 053-9327773</a></p>
+    <p>📧 <a href="mailto:Shem@tovcom.org"><i class="fas fa-envelope"></i> שלח מייל</a></p>
+    <p>📱 עקבו אחרינו:</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/12GV1v4F7uL/?mibextid=wwXIfr" target="_blank">
+        <img src="facebook.png" alt="פייסבוק" class="icon"> פייסבוק
+      </a>
+      |
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="instagram.png" alt="אינסטגרם" class="icon"> אינסטגרם
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var message = document.getElementById('message').value;
+
+      var whatsappMessage = `שלום, אני ${name} והנה פרטי יצירת הקשר שלי:\nאימייל: ${email}\nטלפון: ${phone}\nהודעה: ${message}`;
+      var phoneNumber = "972526900556"; 
+
+      var url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>

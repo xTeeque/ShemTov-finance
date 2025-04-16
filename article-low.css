@@ -1,0 +1,342 @@
+/* כללי */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alef', sans-serif;
+    direction: rtl;
+    background-color: #f5f7fa;
+    color: #1a1a1a;
+  }
+  
+  a {
+    color: #0b3d91;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+ /* עיצוב בר ניווט */
+.navbar {
+  background-color: #2a4971;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between; /* מוודא שהלוגו בצד אחד והליסט בצד השני */
+  align-items: center; /* ממרכז את הלוגו והליסט אנכית */
+}
+
+/* עיצוב הלוגו */
+.logo {
+  height: 50px; /* גובה הלוגו */
+}
+
+/* עיצוב רשימת הניווט */
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; 
+  gap: 60px;
+  position: relative;
+  flex-grow: 1; 
+}
+
+/* עיצוב כל פריט ברשימה */
+.navbar-list li {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* עיצוב הקישורים */
+.navbar-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+/* עיצוב הקישורים בעת ריחוף */
+.navbar-list a:hover {
+  color: #ffbf00;
+}
+  
+  /* תמונת גיבור */
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    max-width: 90%;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  }
+  
+  /* תוכן המאמר */
+  main {
+    padding: 60px 6%;
+    max-width: 960px;
+    margin: auto;
+    line-height: 1.8;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  main h1 {
+    font-size: 2.2rem;
+    color: #0b3d91;
+    margin-bottom: 24px;
+  }
+  
+  main h2 {
+    font-size: 1.5rem;
+    color: #0b3d91;
+    margin-top: 36px;
+  }
+  
+  main p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 18px;
+  }
+  
+  main ul {
+    padding-right: 24px;
+    margin-bottom: 20px;
+  }
+  
+  main ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* קופסת קריאה לפעולה */
+  .callout-box {
+    margin-top: 40px;
+    background-color: #e8f0fe;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .callout-box h3 {
+    margin-bottom: 10px;
+    color: #0b3d91;
+  }
+  
+  .callout-box p {
+    margin: 0;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  /* עיצוב אייקונים */
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* עיצוב לפוטר - לא משתנה */
+footer {
+  background-color: #2a4971;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p, footer a {
+  color: #fff;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+footer a:hover {
+  color: #ffbf00;
+}
+
+.footer-content .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer-content .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  /* עיצוב בר ניווט */
+  .navbar {
+    flex-direction: column; /* שינוי לכיוון אנכי */
+    padding: 15px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-list a {
+    font-size: 16px;
+    padding: 12px;
+    display: block;
+    width: 100%;
+  }
+
+  /* תמונת גיבור */
+  .hero-image {
+    height: 300px; /* הגובה של התמונה מותאם יותר למסכים קטנים */
+  }
+
+  .hero-text {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* תוכן המאמר */
+  main {
+    padding: 40px 5%;
+    max-width: 100%;
+    line-height: 1.6;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  main h1 {
+    font-size: 1.8rem;
+    color: #0b3d91;
+    margin-bottom: 20px;
+  }
+
+  main h2 {
+    font-size: 1.3rem;
+    color: #0b3d91;
+    margin-top: 30px;
+  }
+
+  main p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  main ul {
+    padding-right: 16px;
+  }
+
+  /* קופסת קריאה לפעולה */
+  .callout-box {
+    margin-top: 30px;
+    background-color: #e8f0fe;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .callout-box h3 {
+    margin-bottom: 8px;
+    color: #0b3d91;
+  }
+
+  .callout-box p {
+    margin: 0;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+
+  /* התאמת אייקונים */
+  .icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+  }
+
+  /* עיצוב לפוטר במובייל */
+  footer {
+    padding: 30px 15px;
+  }
+
+  footer p, footer a {
+    font-size: 0.9rem;
+  }
+
+  .footer-content .social-icons {
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .footer-content .social-icons a {
+    font-size: 1.1rem;
+  }
+}
+
