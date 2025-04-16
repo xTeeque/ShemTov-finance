@@ -504,3 +504,65 @@ footer p a:hover {
   }
 }
 
+/* תיקון ניווט וכרטיסים במובייל */
+@media (max-width: 768px) {
+  /* ניווט */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-list li {
+    width: 100%;
+  }
+
+  .navbar-list a {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .dropdown-content li a {
+    background-color: #2a4971;
+    border-top: 1px solid #ccc;
+    font-size: 15px;
+  }
+
+  /* כרטיסים */
+  .cards-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: hidden;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .card-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-side {
+    padding: 20px;
+  }
+
+  .slider-text h1 {
+    font-size: 20px;
+  }
+}
