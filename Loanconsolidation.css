@@ -241,6 +241,76 @@ body {
   color: #ffbf00;
 }
 @media (max-width: 768px) {
+  /* ניווט */
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-list {
+    flex-direction: row; /* שמירה על שורה */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* במקרה שאין מקום */
+  }
+
+  .navbar-list a {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  /* תפריט נפתח */
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+  }
+
+  /* Hero */
+  .hero-image {
+    height: 350px; /* שמור על אותו גובה כמו בדסקטופ */
+  }
+
+  .hero-text {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    padding: 20px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 20px;
+  }
+
+  /* טופס CTA */
+  .cta form {
+    max-width: 100%;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .cta input,
+  .cta button {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  /* פוטר */
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer-content .social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+}
+@media (max-width: 768px) {
   /* התאמה בר ניווט */
   .navbar {
     flex-direction: column; /* שינוי לכיוון אנכי */
