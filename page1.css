@@ -306,88 +306,83 @@ footer {
 
 /* תגובה רספונסיבית למובייל (עד 768px) */
 @media screen and (max-width: 768px) {
-  /* בר ניווט */
   .navbar {
-      padding: 10px;
-      height: auto; /* מתאם את הגובה של הבר ניווט */
+    padding: 10px 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
   }
 
   .navbar-list {
-      display: block;
-      text-align: center;
-      gap: 20px; /* מבדל בין הקישורים */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px 0;
   }
 
   .navbar-list li {
-      display: block;
-      margin-right: 0;
-      margin-bottom: 15px; /* מרווח נוסף בין פריטים */
+    margin: 0;
   }
 
   .navbar-list a {
-      font-size: 16px; /* הפחתת גודל הפונט */
-      padding: 12px 0; /* הפחתת הרוחב */
+    font-size: 16px;
+    padding: 8px 12px;
   }
 
-  /* תפריט Dropdown */
   .dropdown-content {
-      min-width: 200px; /* צמצום רוחב התפריט */
+    min-width: 200px;
   }
 
-  /* תמונות */
   img {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
-  /* הסברים */
-  .explanation1, .explanation2, .explanation3, .explanation4, .explanation5, .explanation6 {
-      padding: 15px;
-      margin: 15px auto;
-      max-width: 95%;
-  }
-
-  /* כותרות */
   h2 {
-      font-size: 1.6em; /* הפחתת גודל הכותרת */
+    font-size: 1.6em;
   }
 
   h4 {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
 
-  /* טקסט */
   p, ul li {
-      font-size: 1em; /* הפחתת גודל הטקסט */
+    font-size: 1em;
   }
 
-  /* סוגי משכנתאות */
+  .explanation1, .explanation2, .explanation3, .explanation4, .explanation5, .explanation6 {
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 95%;
+  }
+
   .types1, .types2, .types3, .types4, .types5 {
-      padding: 15px;
-      margin: 12px 0;
+    padding: 15px;
+    margin: 12px 0;
   }
 
-  /* אייקונים */
   .icon {
-      width: 18px;
-      height: 18px;
+    width: 18px;
+    height: 18px;
   }
 
-  /* פוטר */
   footer {
-      padding: 20px;
+    padding: 20px;
   }
 
   .footer-content .social-icons a {
-      font-size: 20px; /* הפחתת גודל האייקונים */
-      margin: 0 8px;
+    font-size: 20px;
+    margin: 0 8px;
   }
 
-  /* התאמת כפתור שליחה */
   .submit-button {
-      width: 100%;
-      padding: 15px;
-      font-size: 18px;
-      margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 10px;
   }
 }
