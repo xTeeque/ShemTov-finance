@@ -242,37 +242,67 @@ body {
 }
 
 
-  /* בר ניווט למובייל */
+/* בר ניווט למובייל */
 @media screen and (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* סדר אנכי */
-    align-items: flex-start;
+    flex-direction: row; /* שורה */
+    justify-content: space-between; /* מוודא שהלוגו בצד אחד והניווט בצד שני */
+    padding: 10px;
   }
 
   .navbar-list {
-    display: none; /* חבוי במובייל */
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
+    display: flex; /* מציג את התפריט בשורה */
+    gap: 20px;
     text-align: right;
-  }
-
-  .navbar-list.show {
-    display: block; /* הצגת התפריט */
+    width: auto;
   }
 
   .navbar-list li {
-    width: 100%;
-    text-align: right;
+    margin-bottom: 0; /* מרווחים קטנים בין פריטי הניווט */
   }
 
   .navbar-list a {
     padding: 12px 20px;
     font-size: 16px;
+    display: block;
   }
 
+  /* תפריט Dropdown */
+  .dropdown-content {
+    min-width: 200px; /* צמצום רוחב התפריט */
+    display: none; /* חבוי במובייל */
+    position: absolute;
+    background-color: #2a4971;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    margin-top: 10px;
+    right: 0;
+    border-radius: 8px;
+  }
+
+  /* הצגת dropdown כאשר ריחפים על הפריט */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content li {
+    text-align: right; /* מיישר את הפריטים בימין */
+  }
+
+  .dropdown-content a {
+    padding: 12px 20px;
+    font-size: 14px;
+    display: block;
+    color: #fff;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1e3552;
+  }
+
+  /* תמונות */
   .hero-image {
-    height: 250px; /* התאם את גובה התמונה למובייל */
+    height: 250px; /* גובה תמונה מותאם למובייל */
   }
 
   .hero-text h1 {
