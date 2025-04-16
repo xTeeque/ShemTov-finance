@@ -453,41 +453,54 @@ footer p a:hover {
   }
 }
 
+/* רספונסיביות נוספת לטלפונים */
 @media (max-width: 600px) {
-  .navbar-list {
+  .navbar {
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    padding: 10px;
   }
 
-  .navbar-list li {
-    margin: 5px 10px;
+  .navbar-list {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
   }
 
   .navbar-list a {
     font-size: 14px;
-    padding: 8px;
+    padding: 8px 12px;
   }
-}
 
-@media (max-width: 600px) {
   .cards-wrapper {
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    padding: 10px;
     gap: 15px;
-    padding: 20px 10px;
   }
 
   .card-container {
-    width: 250px;
-    flex: 0 0 auto;
+    width: 90vw; /* כמעט מלא ברוחב מסך */
+    height: auto;
   }
 
   .card-side {
     padding: 15px;
+    font-size: 14px;
   }
 
   .slider-text h1 {
     font-size: 20px;
   }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+  }
+
+  .submit-button {
+    width: 90%;
+  }
 }
+
